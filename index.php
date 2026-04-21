@@ -13,16 +13,20 @@
             <div class="bar"></div>
         </div>
         <nav>
-            <a href="">Home</a>
-            <a href="">About</a>
-            <img src="" alt="">
-            <a href="">Contact</a>
-            <a href="">Log in</a>
+            <a href="">HOME</a>
+            <a href="">ABOUT</a>
+            <a href="">COMMUNITY</a>
+            <a href="">LOGIN</a>
         </nav>
-
     </header>
     <main>
-
+        <img src="bilder/logo2-Photoroom.png" alt="Logo">
+        <div class="text">
+            <section>
+                <h1>Kerbal Space Program</h1>
+                <p>Kerbal Space Program is a space flight simulation video game developed and published by Squad. In the game, players manage a space program, building and launching spacecraft to explore celestial bodies within a fictional solar system. The game features realistic physics and orbital mechanics, allowing players to experience the challenges of space exploration while designing and piloting their own rockets and spaceplanes.</p>
+            </section>
+        </div>
     </main>
     <footer>
 
