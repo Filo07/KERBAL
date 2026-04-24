@@ -13,14 +13,11 @@
             <div class="bar"></div>
         </div>
         <nav>
-            <a href="">HOME</a>
-            <a href="">ABOUT</a>
-            <a href="">COMMUNITY</a>
-            <a href="">LOGIN</a>
+            <a href="login.php">LOGIN</a>
         </nav>
     </header>
     <main>
-        <img src="bilder/logo2-Photoroom.png" alt="Logo">
+        <img src="bilder/logo3.png" alt="Logo">
         <div class="text">
             <section>
                 <h1>Kerbal Space Program</h1>
