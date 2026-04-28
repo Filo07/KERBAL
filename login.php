@@ -27,21 +27,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
+<link rel="stylesheet" href="form.css">
 <html>
 <head><title>Login</title></head>
-<body>
+    <body>
+        <div class="stars-1"></div>
+        <div class="stars-2"></div>
+        <div class="stars-3"></div>
 
-<h2>Login</h2>
+        <section>
+            <?php if ($error) echo "<p>$error</p>"; ?>
 
-<?php if ($error) echo "<p>$error</p>"; ?>
-
-<form method="POST">
-    <label>Username: <input type="text" name="username" required></label><br><br>
-    <label>Password: <input type="password" name="password" required></label><br><br>
-    <button type="submit">Login</button>
-</form>
-
-<p>No account? <a href="register.php">Register here</a></p>
-
-</body>
+                <form method="POST">
+                    <h1>LOGIN</h1>
+                    <label><input type="text" name="username" placeholder="Enter your username" required></label><br><br>
+                    <label><input type="password" name="password" placeholder="Enter your password" required></label><br><br>
+                    <button type="submit">Login</button>
+                    <p>No account? <a href="register.php">Register here</a></p>
+                </form>
+        </section>
+    </body>
 </html>
