@@ -290,14 +290,14 @@ form button {
 
 form button:hover {
   box-shadow: #15ba03 0px 0px 15px;
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-1.5px) scale(1);
 }
 
 form button:active {
   background: var(--uicolor2);
   box-shadow: none;
   border: none;
-  transform: translateY(+3px) scale(0.98);
+  transform: translateY(+1.5px) scale(0.98);
 }
 form h1 {
     color: var(--brödtext);

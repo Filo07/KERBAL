@@ -47,7 +47,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Kerbal Space Program Fan Site. All rights reserved.</p>
+        <p>&copy; 2026 Kerbal Space Program Fan Site. All rights reserved.</p>
         <a href="https://github.com/Filo07">Developer GitHub</a>
     </footer>
 
