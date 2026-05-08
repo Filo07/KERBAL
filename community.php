@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+require_once 'asset.php';
+
+if (!isLevel(5)) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,30 +26,25 @@
             <div class="bar"></div>
         </div>
         <nav>
-            <a href="dashboard.php">HOME</a>
+            <a href="index.php">HOME</a>
             <a href="about.php">ABOUT</a>
-            <a href="community.php">COMMUNITY</a>
-            <a href="logout.php">LOGOUT</a>
+            <?php if (isLevel(5)): ?>
+                <a href="community.php">COMMUNITY</a>
+            <?php endif; ?>
+            <?php if (isLevel(5)): ?>
+                <a href="logout.php">LOGOUT</a>
+            <?php else: ?>
+                <a href="login.php">LOGIN</a>
+            <?php endif; ?>
         </nav>
     </header>
 
     <main>
-        <img src="bilder/logo3.png" alt="Logo">
+        <img src="bilder/logo5.png" alt="Logo">
         <div class="backboard">
             <section class="navigate">
-                <h1>Welcome User!</h1>
+                <h1>Community</h1>
                 <div class="line"></div>
-                <h2>This site may not take you to the Mun, but it can tell you how!</h2>
-                <p>Kerbal Space Program offers a vast universe to explore. And it will make your dreams of space exploration come true! Here you can read up on the Kerbin solar system, or why Jebediah Kerman is the best pilot in the galaxy and much more!</p>
-                <a href="planet.php" class="button">Explore the Kerbin Solar System</a>
-                <a href="jebediah.php" class="button">Learn about Jebediah Kerman</a>
-                <div class="line"></div>
-                <h2>For those of you who want to explore the<br>whats and whys of this page:</h2>
-                <p>Simply click the button below to read up on this website's history!</p>
-                <a href="about.php" class="button">Read the History</a>
-                <div class="line"></div>
-                <h2>P.S : Dont forget to check out our community page!</h2>
-                <a href="community.php" class="button">Visit the Community Page</a>
             </section>
         </div>
     </main>

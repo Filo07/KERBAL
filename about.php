@@ -35,31 +35,22 @@ require_once 'asset.php';
     </header>
 
     <main>
-        <img src="bilder/logo3.png" alt="Logo">
+        <img src="bilder/logo4.png" alt="Logo">
         <div class="backboard">
             <section class="navigate">
-                <h1>Welcome to our page!</h1>
+                <h1>Our History</h1>
                 <div class="line"></div>
-                <h2>We may not take you to the Mun, but we tell you how!</h2>
-                <p>Kerbal Space Program offers a vast universe to explore. And it will make your dreams of space exploration come true! Here you can read up on the Kerbin solar system, or why Jebediah Kerman is the best pilot in the galaxy and much more!</p>
-                <?php if (isLevel(5)): ?>
-                    <a href="planet.php" class="button">Explore the Kerbin Solar System</a>
-                    <a href="jebediah.php" class="button">Learn about Jebediah Kerman</a>
-                <?php else: ?>
-                    <a href="login.php" class="button">Login to explore the planets</a>
-                    <a href="login.php" class="button">Login to learn Jebediah's secrets</a>
-                <?php endif; ?>
+                <h2>How did this website come to be?</h2>
+                <p>As a passionate fan of Kerbal Space Program, I wanted to create a space where fellow enthusiasts could come together to share their love for the game. This website was born out of a desire to provide a platform for fans to connect, share their creations, and explore the rich lore of the Kerbin solar system. Over time, it has evolved into a vibrant community hub where players can find resources, discuss strategies, and celebrate all things Kerbal!</p>
                 <div class="line"></div>
-                <h2>For those of you who want to explore the<br>whats and whys of this page:</h2>
-                <p>Simply click the button below to read up on this website's history!</p>
-                <a href="about.php" class="button">Read the History</a>
+                <h2>What can you find here?</h2>
+                <p>Here, you can discover a wealth of information about the Kerbal Space Program universe, including detailed guides, community discussions, and exclusive content for dedicated fans!</p>
                 <div class="line"></div>
-                <h2>P.S : Dont forget to check out our community page!</h2>
-                <?php if (isLevel(5)): ?>
-                    <a href="community.php" class="button">Visit the Community Page</a>
-                <?php else: ?>
-                    <a href="login.php" class="button">Login to access the Community Page</a>
-                <?php endif; ?>
+                <h2>Why is this website log-in only?</h2>
+                <p>To foster a sense of community and ensure a safe and engaging environment for all users, we have implemented a log-in system. This allows us to provide personalized experiences, protect user data, and create a space where fans can interact and share their passion for Kerbal Space Program without any concerns about privacy or security. We want to avoid being like Reddit.</p>
+                <div class="line"></div>
+                <h2>Return to the Homepage:</h2>
+                <a href="index.php">Home</a>
             </section>
         </div>
     </main>

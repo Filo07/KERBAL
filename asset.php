@@ -7,8 +7,8 @@ $db_name="kerbal";
 $conn=mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 function isLevel($level){
-    if(isset($_SESSION['level'])){
-        if(intval($_SESSION['level'])>=$level){
+    if(isset($_SESSION['userlevel'])){          
+        if(intval($_SESSION['userlevel'])>=$level){
             return true;
         }else{
             return false;
