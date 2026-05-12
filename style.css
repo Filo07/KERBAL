@@ -432,3 +432,60 @@ main .text section {
   border-bottom: var(--brödtext) 3px dotted;
 }
 
+/* ---------------------------------------------------------------------------*/
+
+.community-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+.community-layout .backboard {
+    flex: 1;
+}
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shop-item {
+    background: rgba(255,255,255,0.05);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.shop-item h3 {
+    margin: 0 0 6px 0;
+}
+
+.shop-desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 4px 0;
+}
+
+.shop-author {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 4px 0;
+}
+
+.shop-price {
+    color: #a0c4ff;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.basket-link {
+    text-align: right;
+    margin-top: 12px;
+}
