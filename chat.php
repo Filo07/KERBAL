@@ -8,7 +8,6 @@ require_once 'asset.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="header.js" defer></script>
 </head>
 <body>
 
@@ -35,17 +34,12 @@ require_once 'asset.php';
     </header>
 
     <main>
-        <img src="bilder/logo5.png" alt="Logo">
         <div class="backboard">
             <section class="navigate">
-                <h1>Community features:</h1>
-                <div class="line"></div>
-                <h2>Download or Upload Creations:</h2>
-                <a href="">Community Shop</a>
-                <div class="line"></div>
-                <h2>Share your thoughts:</h2>
-                <a href="chat.php">Community Live Chat</a>
-
+                <h1>Community Live Chat</h1>
+                <div id="chat-box"></div>
+                <input type="text" id="msg-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
             </section>
         </div>
     </main>
