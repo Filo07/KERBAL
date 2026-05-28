@@ -1,5 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=localhost;dbname=chat", "user", "pass");
-$pdo->prepare("INSERT INTO tbl_chat (username, message) VALUES (?, ?)")
-    ->execute([$_SESSION['username'], htmlspecialchars($_POST['message'])]);
+$conn = mysqli_connect("localhost", "root", "", "kerbal");
+$stmt = mysqli_prepare($conn, "INSERT INTO tbl_chat (username, message) VALUES (?, ?)");
+mysqli_stmt_bind_param($stmt, "ss", $_SESSION['username'], htmlspecialchars($_POST['message']));
+mysqli_stmt_execute($stmt);

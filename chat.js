@@ -21,5 +21,12 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     input.value = "";
 });
 
+document.getElementById("msg-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        document.getElementById("send-btn").click();
+        e.target.focus();
+    }
+});
+
 setInterval(fetchMessages, 2000);
 fetchMessages();

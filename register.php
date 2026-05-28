@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = $_POST['password'];
 
-    
     $stmt = mysqli_prepare($conn, 'SELECT id FROM tbl_kerbal WHERE username = ?');
     mysqli_stmt_bind_param($stmt, 's', $username);
     mysqli_stmt_execute($stmt);
@@ -25,10 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mysqli_stmt_execute($stmt2)) {
             $success = 'Account created! <a href="login.php">Login here</a>';
         } else {
-            $error = 'Something went wrong. Please try again.';
+            $error = 'Something went wrong.';
         }
     }
 }
+
 ?>
 <!DOCTYPE html>
 <link rel="stylesheet" href="form.css">

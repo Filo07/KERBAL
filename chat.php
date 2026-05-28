@@ -2,6 +2,12 @@
 <?php
 require_once 'asset.php';
 ?>
+<?php
+if (!isLevel(5)) {
+    header("Location: login.php");
+    exit;
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,6 +55,7 @@ require_once 'asset.php';
         <a href="https://github.com/Filo07">Developer GitHub</a>
     </footer>
 
+    <script src="chat.js"></script>
     <script>
         const s1 = document.querySelector('.stars-1');
         const s2 = document.querySelector('.stars-2');

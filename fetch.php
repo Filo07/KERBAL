@@ -1,5 +1,9 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=chat", "user", "pass");
-$stmt = $pdo->prepare("SELECT id, username, message FROM tbl_chat WHERE id > ? ORDER BY id ASC");
-$stmt->execute([intval($_GET['last_id'])]);
-echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+$conn = mysqli_connect("localhost", "root", "", "kerbal");
+$stmt = mysqli_prepare($conn, "SELECT id, username, message FROM tbl_chat WHERE id > ? ORDER BY id ASC");
+$last_id = intval($_GET['last_id']);
+mysqli_stmt_bind_param($stmt, "i", $last_id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+$messages = mysqli_fetch_all($result, MYSQLI_ASSOC);
+echo json_encode($messages);

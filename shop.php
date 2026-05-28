@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <?php
 require_once 'asset.php';
+
+$query = "SELECT * FROM tbl_products";
+$result = mysqli_query($conn, $query);
+$products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="style.css">
     <script src="header.js" defer></script>
 </head>
@@ -35,16 +41,31 @@ require_once 'asset.php';
     </header>
 
     <main>
-        <img src="bilder/logo5.png" alt="Logo">
         <div class="backboard">
             <section class="navigate">
-                <h1>Community features:</h1>
+                <h1>Shop</h1>
+                <div class="line2"></div>
+                <?php if (isset($_SESSION['flash'])): ?>
+                    <p><?php echo htmlspecialchars($_SESSION['flash']); ?></p>
+                    <?php unset($_SESSION['flash']); ?>
+                <?php endif; ?>
+                <a href="cart.php" class="addbutton">View Cart (<?php echo $cartCount; ?>)</a>
                 <div class="line"></div>
-                <h2>Download or Upload Creations:</h2>
-                <a href="shop.php">Community Shop</a>
-                <div class="line"></div>
-                <h2>Share your thoughts:</h2>
-                <a href="chat.php">Community Live Chat</a>
+                <?php if (empty($products)): ?>
+                    <p>No products available right now.</p>
+                <?php else: ?>
+                    <?php foreach ($products as $p): ?>
+                        <div class="product">
+                            <h2><?php echo htmlspecialchars($p['name']); ?></h2>
+                            <p>Price: <?php echo number_format($p['price'], 2); ?> kr</p>
+                            <form method="POST" action="cart_add.php">
+                                <input type="hidden" name="product_id" value="<?php echo (int)$p['id']; ?>">
+                                <button type="submit" class="addbutton">Add to Cart</button>
+                            </form>
+                        </div>
+                        <div class="line"></div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
 
             </section>
         </div>
