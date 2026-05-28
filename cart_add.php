@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $product_id = isset($_POST['product_id']) ? (int)$_POST['product_id'] : 0;
 
-// Verify product exists (stock check removed)
 $stmt = mysqli_prepare($conn, "SELECT id, name FROM tbl_products WHERE id = ?");
 mysqli_stmt_bind_param($stmt, "i", $product_id);
 mysqli_stmt_execute($stmt);
@@ -21,7 +20,6 @@ if (!$product) {
     exit;
 }
 
-// Add to cart
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
