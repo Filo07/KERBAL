@@ -33,7 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <link rel="stylesheet" href="form.css">
 <html>
-<head><title>Register</title></head>
+    <head>
+        <title>Register</title>
+    </head>
     <body>
         <div class="stars-1"></div>
         <div class="stars-2"></div>

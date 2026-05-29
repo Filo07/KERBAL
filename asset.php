@@ -27,12 +27,10 @@ function fix($str_raw){
 
 function isUserTaken($username){
     global $conn;
-    $sql="SELECT username FROM tbl_kerbal WHERE username='$username'";
-    $result=mysqli_query($conn, $sql);
-    if(mysqli_num_rows($result)>0){
-        return true;
-    }else{
-        return false;
-    }
+    $stmt = mysqli_prepare($conn, "SELECT username FROM tbl_kerbal WHERE username = ?");
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    return mysqli_num_rows($result) > 0;
 }
 ?>

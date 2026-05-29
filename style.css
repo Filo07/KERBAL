@@ -432,8 +432,6 @@ main .text section {
   border-bottom: var(--brödtext) 3px dotted;
 }
 
-/* ---------------------------------------------------------------------------*/
-
 #chat-box {
     margin-top: 20px;
     height: 400px;
