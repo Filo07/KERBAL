@@ -82,12 +82,12 @@ if (!empty($_SESSION['cart'])) {
                                 <p>Subtotal: <?php echo number_format($item['subtotal'], 2); ?> kr</p>
                             </div>
                             
-                            <form method="POST" action="cart_remove.php">
+                            <form method="POST" action="cart_remove.php" class="remform">
                                 <input type="hidden" name="product_id" value="<?php echo (int)$item['id']; ?>">
-                                <button type="submit" class="button">Remove</button>
+                                <button type="submit" class="removebutton">Remove</button>
                             </form>
                         </div>
-                        <div class="line"></div>
+                        <div class="line2"></div>
                     <?php endforeach; ?>
 
                     <div class="cart-total">

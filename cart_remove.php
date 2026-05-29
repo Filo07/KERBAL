@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             unset($_SESSION['cart']);
         }
         
-        $_SESSION['flash'] = "Item removed from your cart.";
+        $_SESSION['flash'] = "Removed an item from your cart.";
     }
 }
 
